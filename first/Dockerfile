@@ -1,4 +1,4 @@
-FROM linux:latest
+FROM mobaxterm:latest
 
 # Set the working directory in the image
 WORKDIR /app
