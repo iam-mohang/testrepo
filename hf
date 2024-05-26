@@ -1,1 +1,13 @@
-jaj
+Error: Kubernetes cluster unreachable: invalid configuration: no configuration has been provided, try setting KUBERNETES_MASTER environment variable
+│ 
+│   with helm_release.alb_ingress_controller,
+│   on helm.tf line 1, in resource "helm_release" "alb_ingress_controller":
+│    1: resource "helm_release" "alb_ingress_controller" {
+│ 
+╵
+╷
+│ Error: waiting for EKS Node Group (mohan-pro:eks_nodes-2024052600224109530000000e) create: unexpected state 'CREATE_FAILED', wanted target 'ACTIVE'. last error: i-02c84a7055cd9cda2: NodeCreationFailure: Instances failed to join the kubernetes cluster
+│ 
+│   with module.eks.module.eks_managed_node_group["eks_nodes"].aws_eks_node_group.this[0],
+│   on .terraform/modules/eks/modules/eks-managed-node-group/main.tf line 272, in resource "aws_eks_node_group" "this":
+│  272: resource "aws_eks_node_group" "this" {
